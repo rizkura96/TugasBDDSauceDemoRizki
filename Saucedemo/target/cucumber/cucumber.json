@@ -1,0 +1,255 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 14215678800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "user completed order product",
+        "description": "",
+        "id": "completed-order;user-completed-order-product;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 909461000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 687619100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User open the website sauce demo",
+            "match": {
+              "location": "LoginSteps.verifyLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1777655200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User input \"standard_user\" as userName and Input \"secret_sauce\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 104003300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User already on landing page",
+            "match": {
+              "location": "PurchaseSteps.verifyLandingPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1385451600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User sort product list by \"Name (Z to A)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Name (Z to A)",
+                  "offset": 27
+                }
+              ],
+              "location": "PurchaseSteps.sortProductValue(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1231363600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User choice 2 product from the list \"Sauce Labs Onesie\" and \"Test.allTheThings() T-Shirt (Red)\"",
+            "match": {
+              "location": "PurchaseSteps.choiceBasket()"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1244832100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click on icon cart to verify product",
+            "match": {
+              "location": "CheckoutStep.clickIconsCart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1128165700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User delete product \"Sauce Labs Onesie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sauce Labs Onesie",
+                  "offset": 21
+                }
+              ],
+              "location": "CheckoutStep.deleteProduct(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1119168900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User click button checkout",
+            "match": {
+              "location": "CheckoutStep.clickOnCheckOut()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2854016300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User input Check Out Form in Firs Name \"Rizki\", Last Name \"Kurniawan\" and Partial Code \"999\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Rizki",
+                  "offset": 40
+                },
+                {
+                  "val": "Kurniawan",
+                  "offset": 59
+                },
+                {
+                  "val": "999",
+                  "offset": 88
+                }
+              ],
+              "location": "CheckOutFromStep.inputCheckOutForm(String,String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 139280500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User verify nominal taxt",
+            "match": {
+              "location": "CompleteStep.verifyNominalTax()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 155901700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User verify Summary total Checkout",
+            "match": {
+              "location": "CompleteStep.verifyNominalTotal()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5217229800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User click button finish",
+            "match": {
+              "location": "CompleteStep.clickOnBtnFinish()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1005474500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User complete order",
+            "match": {
+              "location": "CompleteStep.verifyOnCheckOutCompletePage()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Complete"
+          }
+        ]
+      }
+    ],
+    "name": "Completed order",
+    "description": "As a user I want to completed buy product",
+    "id": "completed-order",
+    "keyword": "Feature",
+    "uri": "features/Complete.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Complete"
+      }
+    ]
+  }
+]
